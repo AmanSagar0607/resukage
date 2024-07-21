@@ -10,10 +10,17 @@ const axiosClient = axios.create({
   },
 });
 
-const createNewResume = (data) => axiosClient.post('/user-resumes', data);
-const GetUserResumes=(userEmail)=>axiosClient.get('/user-resumes?filters[userEmail][$eq]='+userEmail);
+const createNewResume = (data) => axiosClient.post("/user-resumes", data);
+
+const GetUserResumes = (userEmail) =>
+  axiosClient.get(`/user-resumes?filters[userEmail][$eq]=${userEmail}`);
+
+const updateResumeDetails = (id, data) =>
+  axiosClient.put(`/user-resumes/${id}`, data);
+
 
 export const GlobalApi = {
   createNewResume,
   GetUserResumes,
+  updateResumeDetails,
 };

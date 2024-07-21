@@ -26,12 +26,17 @@ module.exports = {
         primary: {
           // // DEFAULT: "#394149",
           // DEFAULT: "#003e29",
-          DEFAULT: "#FF630B",
+          // DEFAULT: "#FF630B",
+          DEFAULT: "#166a41",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        button: {
+          DEFAULT: "#FF630B", // Button color set to #FF630B
+          foreground: "#FFFFFF", // Example foreground color for text inside button
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
